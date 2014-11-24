@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/drawer_photo_width"
+    android:layout_height="@dimen/drawer_photo_height" >
+
+    <ImageView
+        android:id="@+id/fb_main_drawer_big_photo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+	    android:layout_gravity="center"
+        android:contentDescription="@string/image" />
+
+    <ImageView
+        android:id="@+id/fb_main_drawer_small_photo"
+        android:layout_width="@dimen/user_drawer_photo_width"
+        android:layout_height="@dimen/user_drawer_photo_height"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="6dp"
+        android:layout_marginLeft="6dp"
+        android:baselineAlignBottom="true"
+        android:contentDescription="@string/image" />
+    
+</RelativeLayout>

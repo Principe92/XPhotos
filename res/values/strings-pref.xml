@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources
+    xmlns:tools="http://schemas.android.com/tools"
+ 	tools:ignore="MissingTranslation" >
+    
+    <!-- Cache Preference -->
+    <string name="pref_cache_category">CACHE</string>
+    <string name="pref_cache_category_key">pref_cache_category</string>
+    <string name="pref_cache_key">pref_cache</string>
+    <string name="pref_cache_title">Clear Cache</string>
+    <string name="pref_cache_summary">Enable cache clearing</string>
+    <string name="pref_cacheClearMode_key">pref_cacheClearMode</string>
+    <string name="pref_cacheClearMode_summary">Select interval</string>
+    <string name="pref_cacheClearMode_title">Frequency</string>
+    <string-array name="pref_cacheClearModeEntries">
+        <item>Daily</item>
+        <item>Weekly</item>
+        <item>Monthly</item>
+    </string-array>
+    <string-array name="pref_cacheClearModeValues">
+        <item>daily</item>
+        <item>weekly</item>
+        <item>monthly</item>
+    </string-array>
+    <string name="pref_cacheClearMode_default">Monthly</string>
+    
+    <!-- Accounts -->
+    <!-- WebPage Preference -->
+    <string name="pref_account_category">ACCOUNTS</string>
+    <string name="pref_account_category_key">pref_account_category_key</string>
+    <string name="pref_defaultAccount_key">pref_defaultAccount_key</string>
+    <string name="pref_defaultAccount_summary">Select account to load on start</string>
+    <string name="pref_defaultAccount_title">Preferred Account</string>
+    <string-array name="pref_defaultAccountEntries">
+        <item>Facebook</item>
+        <item>Twitter</item>
+        <item>Google</item>
+        <item>Gallery</item>
+    </string-array>
+    
+    <string-array name="pref_defaultAccountValues">
+        <item>facebook</item>
+        <item>twitter</item>
+        <item>google</item>
+        <item>gallery</item>
+    </string-array>
+    
+    <string name="pref_defaultAccount_default">facebook</string>
+    <string name="cancel">Cancel</string>
+    <string name="go_on">Continue</string>
+    <string name="save">Save</string>
+    <string name="empty_string"></string>
+    
+    <!-- Favorite Album Preference -->
+    <string name="pref_favFBAlbum_key">fav_album</string>
+    <string name="pref_favFBAlbum_summary">Select your favorite album </string>
+    <string name="pref_favFBAlbum_title">Favorite Album</string>
+    
+    <!-- Clear cache Now -->
+    <string name="pref_clearNow">Clear Cache Now</string>
+    <string name="pref_clearNow_summary">Click to clear cache</string>
+    
+</resources>

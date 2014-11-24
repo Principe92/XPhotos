@@ -1,0 +1,9 @@
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ViewStub
+        android:id="@+id/stub_internet"
+    	android:inflatedId="@+id/viewstub_internet"
+    	android:layout="@layout/check_connection"
+    	android:layout_width="fill_parent"
+    	android:layout_height="fill_parent"/>
+</merge>

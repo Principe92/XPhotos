@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white" >
+    
+    <TextView
+        android:id="@+id/header"
+        style="?android:buttonBarButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="@string/action_about" />
+    
+    <View
+        android:id="@+id/view2"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/header"
+        android:background="@android:color/darker_gray" />
+
+    <!-- Album Name -->
+
+    <TextView
+        android:id="@+id/aname_tw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="6dp"
+        android:layout_marginLeft="10dip"
+        android:layout_marginStart="10dip"
+        android:text="@string/album_name" />
+
+    <TextView
+        android:id="@+id/album_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/aname_tw"
+        android:layout_alignBottom="@+id/aname_tw"
+        android:layout_marginLeft="22dip"
+        android:layout_marginStart="22dip"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:layout_toEndOf="@+id/aname_tw"
+        android:layout_toRightOf="@+id/aname_tw"
+        android:text="@string/album_unknown" />
+
+    <!-- Album Owner -->
+
+    <TextView
+        android:id="@+id/aowner_tw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/aname_tw"
+        android:layout_marginTop="6dp"
+        android:layout_marginLeft="10dip"
+        android:layout_marginStart="10dip"
+        android:text="@string/album_owner" />
+
+    <TextView
+        android:id="@+id/album_owner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/aowner_tw"
+        android:layout_alignBottom="@+id/aowner_tw"
+        android:layout_marginLeft="22dip"
+        android:layout_marginStart="22dip"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:layout_toEndOf="@+id/aowner_tw"
+        android:layout_toRightOf="@+id/aowner_tw"
+        android:text="@string/album_unknown" />
+
+    <!-- Album Size -->
+
+    <TextView
+        android:id="@+id/asize_tw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/aowner_tw"
+        android:layout_marginTop="6dp"
+        android:layout_marginLeft="10dip"
+        android:layout_marginStart="10dip"
+        android:text="@string/album_count" />
+
+    <TextView
+        android:id="@+id/album_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/asize_tw"
+        android:layout_alignBottom="@+id/asize_tw"
+        android:layout_marginLeft="37dip"
+        android:layout_marginStart="37dip"
+        android:layout_toEndOf="@+id/asize_tw"
+        android:layout_toRightOf="@+id/asize_tw"
+        android:text="@string/album_unknown" />
+
+    <!-- Album Privacy -->
+
+    <TextView
+        android:id="@+id/privacy_tw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/asize_tw"
+        android:layout_marginTop="6dp"
+        android:layout_marginLeft="10dip"
+        android:layout_marginStart="10dip"
+        android:text="@string/album_privacy" />
+
+    <TextView
+        android:id="@+id/album_privacy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/privacy_tw"
+        android:layout_alignBottom="@+id/privacy_tw"
+        android:layout_marginLeft="17dip"
+        android:layout_marginStart="17dip"
+        android:layout_toEndOf="@+id/privacy_tw"
+        android:layout_toRightOf="@+id/privacy_tw"
+        android:text="@string/album_unknown" />
+
+    <!-- Album Type -->
+
+    <TextView
+        android:id="@+id/atype_tw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/privacy_tw"
+        android:layout_marginTop="6dp"
+        android:layout_marginLeft="10dip"
+        android:layout_marginStart="10dip"
+        android:text="@string/album_type" />
+
+    <TextView
+        android:id="@+id/album_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/atype_tw"
+        android:layout_alignBottom="@+id/atype_tw"
+        android:layout_marginLeft="32dip"
+        android:layout_marginStart="32dip"
+        android:layout_toEndOf="@+id/atype_tw"
+        android:layout_toRightOf="@+id/atype_tw"
+        android:text="@string/album_unknown" />
+
+    <!-- Album Created Time -->
+
+    <TextView
+        android:id="@+id/created_tw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/atype_tw"
+        android:layout_marginTop="6dp"
+        android:layout_marginLeft="10dip"
+        android:layout_marginStart="10dip"
+        android:text="@string/album_ctime" />
+
+    <TextView
+        android:id="@+id/album_ctime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/created_tw"
+        android:layout_alignBottom="@+id/created_tw"
+        android:layout_marginLeft="14dip"
+        android:layout_marginStart="14dip"
+        android:layout_toEndOf="@+id/created_tw"
+        android:layout_toRightOf="@+id/created_tw"
+        android:text="@string/album_unknown" />
+
+    <!-- Album Updated Time -->
+
+    <TextView
+        android:id="@+id/upated_tw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/created_tw"
+        android:layout_marginTop="6dp"
+        android:layout_marginLeft="10dip"
+        android:layout_marginStart="10dip"
+        android:text="@string/album_utime" />
+
+    <TextView
+        android:id="@+id/album_utime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/upated_tw"
+        android:layout_alignBottom="@+id/upated_tw"
+        android:layout_marginLeft="10dip"
+        android:layout_marginStart="10dip"
+        android:layout_toEndOf="@+id/upated_tw"
+        android:layout_toRightOf="@+id/upated_tw"
+        android:text="@string/album_unknown" />
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/upated_tw"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/darker_gray" />
+
+    <Button
+        android:id="@+id/btn_OKAY"
+        style="?android:buttonBarButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/view1"
+        android:text="@string/btn_CLOSE" />
+
+</RelativeLayout>

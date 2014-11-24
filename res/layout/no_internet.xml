@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+    	xmlns:android="http://schemas.android.com/apk/res/android"
+    	android:layout_width="fill_parent"
+    	android:layout_height="fill_parent"
+    	android:background="?android:selectableItemBackground">
+
+<Button
+    android:id="@+id/check_network"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerVertical="true"
+    android:layout_toRightOf="@+id/retry"
+    android:textColor="@android:color/black"
+    android:text="@string/check_connection" />
+
+<prince.app.sphotos.widget.CustomFont
+	xmlns:newFont="http://schemas.android.com/apk/res/prince.app.sphotos"
+    newFont:typeface="Roboto-Regular.ttf"
+    android:id="@+id/textView1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_above="@+id/retry"
+    android:layout_centerHorizontal="true"
+    android:layout_marginBottom="16dp"
+    android:text="@string/no_network"
+    android:textColor="@android:color/black"
+    android:textSize="22sp" />
+
+<Button
+    android:id="@+id/retry"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignLeft="@+id/textView1"
+    android:layout_centerVertical="true"
+    android:layout_marginLeft="48dp"
+    android:textColor="@android:color/black"
+    android:text="@string/Retry" />
+
+</RelativeLayout>

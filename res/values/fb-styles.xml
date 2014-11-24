@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <style name="FB_theme" parent="@android:Theme.Holo.Light">
+        <item name="android:actionBarStyle">@style/FB_actionBar</item>
+        <item name="android:windowDisablePreview">true</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:actionModeBackground">@drawable/cab_background_top_photo_bar</item>
+    </style>
+
+    <style name="FB_actionBar" parent="@android:style/Widget.Holo.Light.ActionBar">
+        <item name="android:background">#3b5998</item>
+        <item name="android:titleTextStyle">@style/FB_TextStyle</item>
+        <item name="android:indeterminateProgressStyle">@android:style/Widget.ProgressBar.Small</item>
+    </style>
+    
+    <style name="FB_TextStyle" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+    
+    
+    <!-- Albums style -->
+    <style name="FB_theme.albums">
+        <item name="android:actionBarStyle">@style/FB_actionBar.albums</item>
+    </style>
+    
+    <style name="FB_actionBar.albums">
+        <item name="android:background">#669900</item>
+    </style>
+    
+    
+    <!-- Photos style -->
+    <style name="FB_theme.photos">
+        <item name="android:actionBarStyle">@style/FB_actionBar.photos</item>
+    </style>
+    
+    <style name="FB_actionBar.photos">
+        <item name="android:background">#9933CC</item>
+    </style>
+    
+</resources>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" 
+    	android:background="#000">
+    	
+    <!-- details menu -->
+    <item 
+        android:id="@+id/action_details"
+        android:title="@string/action_about"
+        android:showAsAction="ifRoom"
+        android:visible="false"/>
+    
+    <!-- Refresh, should always be in the overflow -->
+    <item 
+        android:id="@+id/action_sync"
+        android:title="@string/action_sync"
+        android:showAsAction="ifRoom" />
+    
+    <!-- settings, should appear as action button -->
+    <item 
+        android:id="@+id/action_settings"
+        android:title="@string/action_settings"
+        android:showAsAction="ifRoom" />
+    
+    <!-- LogOut, should always be in the overflow -->
+    <item 
+        android:id="@+id/action_logout"
+		android:title="@string/action_logout"
+		android:showAsAction="ifRoom" />
+    
+     
+</menu>

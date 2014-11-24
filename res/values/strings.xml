@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (C) 2013 The Android Open Source Project
+  
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+
+<resources
+    xmlns:tools="http://schemas.android.com/tools"
+  	tools:ignore="MissingTranslation" >
+
+    <string name="app_name">XPhotos</string>
+    <string name="app_name_bg">XPHOTOS</string>
+    <string name="app_id">629332293812844</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="image">image</string>
+    <string-array name="social_accounts">
+        <item>Facebook</item>
+        <item>Twitter</item>
+        <item>Google</item>
+        <item>Local Gallery</item>
+    </string-array>
+    <string name="social_account">social media account</string>
+    <string name="drawer_open">open navigation drawer</string>
+    <string name="drawer_close">close navigation drawer</string>
+    <string name="check_connection">Check</string>
+    <string name="no_network">Network Error</string>
+    <string name="facebook">facebook</string>
+    <string name="title_albums">Albums</string>
+    <string name="Retry">Retry</string>
+    <string name="title_gallery">Gallery</string>
+    <string name="text_image_saved">IMAGE SAVED</string>
+    <string name="title_twitter">twitter</string>
+    <string name="title_google">Google</string>
+    
+    <!-- Details String -->
+    <string name="details">Details</string>
+    <string name="btn_OKAY">OK</string>
+    <string name="album_owner">Owner:</string>
+    <string name="album_name">Album:</string>
+    <string name="album_privacy">Privacy:</string>
+    <string name="album_count">Size:</string>
+    <string name="album_type">Type:</string>
+    <string name="album_ctime">Created:</string>
+    <string name="album_utime">Updated:</string>
+    <string name="album_unknown">Unknown</string>
+    
+    <string name="warning_delete_image">Image will be deleted from social account</string>
+    <string name="warning_delete_album">Warning: The album and all its photos will be removed from your facebook account. 
+        								Do you want to continue?</string>
+	<string name="warning_download_albums">Warning: All photos of the album will be downloaded to your device. Do you want to continue?</string>
+    <string name="warning_continue">Do you want to continue?</string>
+    <string name="select_fav">Pick your favorite album</string>
+	
+    <string-array name="main_grid">
+        <item>Albums</item>
+        <item>Covers</item>
+        <item>Profiles</item>
+        <item>Tagged</item>
+        <item>Uploaded</item>
+        <item>Favorite</item>
+    </string-array>
+    
+    <!-- Activity names -->
+    <string name="offline_image_activity">Offline Images</string>
+    <string name="date_unknown" msgid="4277113471036917386">data unknown</string>
+    <string name="initializing" msgid="2374228157398540466">initializing</string>
+    <string name="loading_new" msgid="7893793767294787579">loading_new</string>
+   	<string name="no_sd_card" msgid="2666880203366429182">No SD Card</string>
+    <string name="no_usb_storage" msgid="9156805088935882242">No USB Storage</string>
+    <string name="btn_CLOSE">Close</string>
+    <string name="btn_OPTIONS">Options</string>
+</resources>

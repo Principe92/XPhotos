@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources 
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Holo.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+
+    <style name="gp_theme" parent="@android:Theme.Holo">
+        <item name="android:actionBarStyle">@style/gp</item>
+    </style>
+
+    <style name="gp" parent="@android:style/Widget.Holo.ActionBar">
+        <item name="android:background">#dd4b39</item>
+    </style>
+
+    <style name="twitter_theme" parent="@android:Theme.Holo">
+        <item name="android:actionBarStyle">@style/tw</item>
+    </style>
+
+    <style name="tw" parent="@android:style/Widget.Holo.ActionBar">
+        <item name="android:background">#66757f</item>
+    </style>
+    
+    
+
+    <style name="Local_Theme" parent="@android:style/Theme.Holo">
+
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <item name="android:actionBarStyle">@style/Local_actionBar</item>
+        <item name="android:popupBackground">@style/Pop_Up</item>
+        <item name="android:windowDisablePreview">true</item>
+    </style>
+
+    <style name="Pop_Up" parent="@android:style/Widget.Holo.ListPopupWindow">
+        <item name="android:background">#FFFFFE</item>
+    </style>
+
+    <style name="Local_actionBar" parent="@android:style/Widget.Holo.ActionBar">
+        <item name="android:indeterminateProgressStyle">@android:style/Widget.ProgressBar.Small</item>
+    </style>
+
+    <style name="Full_Image" parent="@android:style/Theme.Holo">
+        <item name="android:actionBarStyle">@style/Local_actionBar</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:windowDisablePreview">true</item>
+    </style>
+
+    <style name="Main" parent="@android:Theme.Holo.Light.NoActionBar"></style>
+
+    <style name="Transparent" parent="@android:style/Theme.Holo">
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="LoginFormContainer">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">16dp</item>
+    </style>
+    
+     <style name="PhotoGridLayout">
+        <item name="android:drawSelectorOnTop">true</item>
+        <item name="android:listSelector">@drawable/photogrid_list_selector</item>
+    </style>
+	
+     <style name="PinProgressButton">
+        <item name="android:clickable">true</item>
+        <item name="android:background">?android:selectableItemBackground</item>
+    </style>
+    
+</resources>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<prince.app.sphotos.tools.MultiSwipeRefreshLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/photos_swipe"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#D4CFCF">
+    
+    <FrameLayout
+        android:id="@+id/photos_frame"
+        android:layout_width = "match_parent"
+        android:layout_height="match_parent">
+        
+		<ProgressBar
+		    android:id="@+id/photos_progress"
+	        style="@android:style/Widget.Holo.ProgressBar.Large"
+	        android:indeterminate="true"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center"/>
+		
+		<GridView
+		    android:visibility="invisible"
+    		style="@style/PhotoGridLayout"
+    		android:id= "@+id/grid"
+    		android:layout_width="fill_parent"
+    		android:layout_height="fill_parent"
+    		android:columnWidth="@dimen/imageSize_100dp"
+    		android:verticalSpacing="@dimen/imageSpacing_1dp"
+    		android:horizontalSpacing="@dimen/imageSpacing_1dp"
+    		android:numColumns="auto_fit"
+    		android:stretchMode="columnWidth"/>
+		
+	</FrameLayout>
+
+ </prince.app.sphotos.tools.MultiSwipeRefreshLayout>

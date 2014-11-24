@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    <PreferenceCategory
+        android:title="@string/pref_account_category"
+        android:key="@string/pref_account_category_key">
+        <ListPreference 
+            android:key="@string/pref_defaultAccount_key"
+            android:summary="@string/pref_defaultAccount_summary"
+            android:title="@string/pref_defaultAccount_title"
+            android:persistent="true"
+            android:dialogTitle="@string/pref_defaultAccount_title"
+            android:negativeButtonText="@string/cancel"
+            android:entries="@array/pref_defaultAccountEntries"
+            android:entryValues="@array/pref_defaultAccountValues"
+            android:defaultValue="@string/pref_defaultAccount_default"/>
+        
+        <ListPreference 
+            android:key="@string/pref_favFBAlbum_key"
+            android:summary="@string/pref_favFBAlbum_summary"
+            android:title="@string/pref_favFBAlbum_title"
+            android:persistent="true"
+            android:dialogTitle="@string/pref_favFBAlbum_title"
+            android:defaultValue="@string/empty_string"
+            android:negativeButtonText="@string/cancel"/>
+     </PreferenceCategory>
+     
+    <PreferenceCategory
+        android:title="@string/pref_cache_category"
+        android:key="@string/pref_cache_category_key">
+        <SwitchPreference
+            android:key="@string/pref_cache_key"
+            android:title="@string/pref_cache_title"
+            android:summary="@string/pref_cache_summary"
+            android:defaultValue="true" />
+        <ListPreference 
+            android:dependency="@string/pref_cache_key"
+            android:key="@string/pref_cacheClearMode_key"
+            android:summary="@string/pref_cacheClearMode_summary"
+            android:title="@string/pref_cacheClearMode_title"
+            android:persistent="true"
+            android:dialogTitle="@string/pref_cacheClearMode_title"
+            android:negativeButtonText="@string/cancel"
+            android:entries="@array/pref_cacheClearModeEntries"
+            android:entryValues="@array/pref_cacheClearModeValues"
+            android:defaultValue="@string/pref_cacheClearMode_default"/>
+        <Preference 
+            android:dependency="@string/pref_cache_key"
+            android:title="@string/pref_clearNow"
+            android:summary="@string/pref_clearNow_summary"/>
+    </PreferenceCategory>
+</PreferenceScreen>
