@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<style name="FB_theme" parent="Theme.AppCompat.Light.NoActionBar">
+
+		<!-- Main theme colors -->
+
+
+		<!-- app actionbar color -->
+		<item name="android:colorPrimary">@color/fb_primary</item>
+
+		<!-- app system bar color -->
+		<item name="android:colorPrimaryDark">@color/fb_primary_dark</item>
+
+		<!-- text color -->
+		<item name="android:textColorPrimary">@android:color/white</item>
+		<item name="android:windowTranslucentStatus">true</item>
+	</style>
+
+</resources>
