@@ -10,9 +10,7 @@ import android.content.Intent;
 import android.os.Build;
 import android.util.Log;
 import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.PopupMenu;
 import android.widget.Toast;
 
@@ -29,7 +27,7 @@ public abstract class ActivityAccounts extends ActivityBase{
 	
 	@Override
 	public void openSettings(){
-		View view = findViewById(R.id.action_main_options);
+		/*View view = findViewById(R.id.action_main_options);
 		mOverflowMenu = new PopupMenu(this, view);
 		mOverflowMenu.setOnMenuItemClickListener(this);
 		MenuInflater inflater = mOverflowMenu.getMenuInflater();
@@ -37,12 +35,12 @@ public abstract class ActivityAccounts extends ActivityBase{
 		
 		hideMenuItems(mOverflowMenu.getMenu());
 		
-		mOverflowMenu.show();
+		mOverflowMenu.show(); */
 	}
 		
 	// Called when an item on the popUp MenuItem is pressed
 	@Override
-	public boolean onMenuItemClick(MenuItem item) {
+	public boolean onOptionsItemSelected(MenuItem item) {
 	    int itemId = item.getItemId();
 		if (itemId == R.id.action_logout){
 			// Sign out from social account

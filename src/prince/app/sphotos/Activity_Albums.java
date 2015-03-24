@@ -28,6 +28,7 @@ import android.graphics.Bitmap;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -103,7 +104,7 @@ public class Activity_Albums extends ActivityImages implements AlertDialogX.Aler
 	}
 	
 	private boolean isTask(String id){
-		return id.equalsIgnoreCase(Activity_Main.TASK_ALBUM);
+		return id.equalsIgnoreCase(FBMainActivity.TASK_ALBUM);
 	}
 	
 	@Override
@@ -218,14 +219,14 @@ public class Activity_Albums extends ActivityImages implements AlertDialogX.Aler
 		
 		setProgressBarIndeterminateVisibility(false);
 		
-		if (FBINIT.isAlbumEmpty() && !FBINIT.ALBUMS_TASK_STARTED && !FBINIT.ALBUMS_TASK_DONE && !GraphRequest.inMap(Activity_Main.TASK_ALBUM)){
+		if (FBINIT.isAlbumEmpty() && !FBINIT.ALBUMS_TASK_STARTED && !FBINIT.ALBUMS_TASK_DONE && !GraphRequest.inMap(FBMainActivity.TASK_ALBUM)){
 	    	// obtain album for the new user
 	    	GraphRequest.albumRequest(	
 	    								true, 						// We are calling this method for the first time
 	    								true, 						// Update the cache with new values
 	    								true, 						// Clear the download trackers
 	    								null, 						// We currently have no requests for the next page of data
-	    								Activity_Main.TASK_ALBUM,// The unique task ID
+	    								FBMainActivity.TASK_ALBUM,// The unique task ID
 	    								FBINIT.sAlbumsArray_NEW,	// The cache to store downloaded data
 	    								0);
 	    }
@@ -262,6 +263,12 @@ public class Activity_Albums extends ActivityImages implements AlertDialogX.Aler
 	public void launchOptions(View view){
 		Fragment_Albums aX = (Fragment_Albums) getSupportFragmentManager().findFragmentByTag(TAG);
 		if (aX != null) aX.launchOptions(view); 
+	}
+
+	@Override
+	public Toolbar getToolBar() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 

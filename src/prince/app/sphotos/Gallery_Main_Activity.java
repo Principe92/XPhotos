@@ -72,7 +72,7 @@ public class Gallery_Main_Activity extends ActivityX{
 	@Override
 	protected void SwitchAccount(int position) {
 		if (position == 0){
-			Intent launch = new Intent(this, Activity_Main.class);
+			Intent launch = new Intent(this, FBMainActivity.class);
 			startActivity(launch);
 		}
 		

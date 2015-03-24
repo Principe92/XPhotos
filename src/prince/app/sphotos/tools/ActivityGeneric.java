@@ -21,7 +21,6 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.util.Log;
 import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
@@ -31,12 +30,11 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.PopupMenu;
-import android.widget.PopupMenu.OnMenuItemClickListener;
 import android.widget.Toast;
 
 
 public abstract class ActivityGeneric extends FragmentActivity implements 
-OnItemClickListener, OnMenuItemClickListener {
+OnItemClickListener{
 	
 	
 	private DrawerLayout mDrawerLayout;
@@ -247,7 +245,7 @@ OnItemClickListener, OnMenuItemClickListener {
         Log.e(TAG, "!!! Over here !!! ");
 	}
 	
-	@Override
+/*	@Override
 	public boolean onMenuItemClick(MenuItem item) {
 	    int itemId = item.getItemId();
 	    AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo)item.getMenuInfo();
@@ -270,7 +268,7 @@ OnItemClickListener, OnMenuItemClickListener {
 		} else {
 			return false;
 		}
-	}
+	} */
 	
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
@@ -281,18 +279,40 @@ OnItemClickListener, OnMenuItemClickListener {
 		}
 		
 		int itemId = item.getItemId();
-		if (itemId == R.id.action_main_camera) {
+	    AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo)item.getMenuInfo();
+	    
+		if (itemId == R.id.action_settings) {
+			// Open the settings menu
+			Intent intent = new Intent();
+	        intent.setClass(this, SettingsActivity.class);
+	        startActivityForResult(intent, 0); 
+	        Log.d(TAG, "settings called");
+			return true;
+		} 
+		
+		else if (itemId == R.id.action_sync) {
+			// Refresh the grid data
+			refreshGrid();
+			return true;
+		} 
+		
+		else if (itemId == R.id.action_details) {
+			// Refresh the grid data
+			refreshGrid();
+			return true;
+		} 
+		
+		else if (itemId == R.id.action_main_camera) {
 			camera.TakePicture();
 			return true;
-		} else if (itemId == R.id.action_main_options) {
-			openSettings(); 
-			return true;
-		} else {
+		} 
+		
+		else {
 			return super.onOptionsItemSelected(item);
 		}
 	}
 	
-	public void openSettings(){
+	/*public void openSettings(){
 			View view = findViewById(R.id.action_main_options);
 			popup = new PopupMenu(this, view);
 			popup.setOnMenuItemClickListener(this);
@@ -310,7 +330,7 @@ OnItemClickListener, OnMenuItemClickListener {
 			.setEnabled(true);
 			
 			popup.show();
-		}
+		} */
 
 	public DrawerLayout getmDrawerLayout() {
 		return mDrawerLayout;

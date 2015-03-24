@@ -100,6 +100,7 @@ public class ImageResizer extends ImageWorker {
 
     @Override
     protected Bitmap processBitmap(Object data) {
+    	Log.e(TAG, "Over Here");
         return processBitmap(Integer.parseInt(String.valueOf(data)));
     }
 

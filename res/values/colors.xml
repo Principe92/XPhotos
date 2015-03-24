@@ -15,27 +15,26 @@
   limitations under the License.
 -->
 
-<resources
-    xmlns:tools="http://schemas.android.com/tools"
-  	tools:ignore="MissingTranslation" >
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
 
-    <color name="grid_state_pressed">#BB7dbcd3</color>
-    <color name="grid_state_selected">#0099CC</color>
-    <color name="grid_state_focused">#777dbcd3</color>
-    
-    <color name="loading_color_1">#1d3352</color>
-    <color name="loading_color_2">#f9f9f9</color>
-    
-    <color name="pin_progress_default_circle_color">#80ffffff</color>
-    <color name="pin_progress_default_progress_color">#33b5e5</color>
-    
-    <color name="swipe_color_1">#9933CC</color>
-    <color name="swipe_color_2">#99CC00</color>
-    <color name="swipe_color_3">#FFBB33</color>
-    <color name="swipe_color_4">#33B5E5</color>
-    
-    <color name="grid_bg_color">#D4CFCF</color>
-    
-    <color name="white">#FFFFFF</color>
+	<color name="grid_state_pressed">#BB7dbcd3</color>
+	<color name="grid_state_selected">#0099CC</color>
+	<color name="grid_state_focused">#777dbcd3</color>
+	<color name="loading_color_1">#1d3352</color>
+	<color name="loading_color_2">#f9f9f9</color>
+	<color name="pin_progress_default_circle_color">#80ffffff</color>
+	<color name="pin_progress_default_progress_color">#33b5e5</color>
+	<color name="swipe_color_1">#9933CC</color>
+	<color name="swipe_color_2">#99CC00</color>
+	<color name="swipe_color_3">#FFBB33</color>
+	<color name="swipe_color_4">#33B5E5</color>
+	<color name="grid_bg_color">#D4CFCF</color>
+	<color name="white">#FFFFFF</color>
+
+	<!-- action bar colors -->
+	<color name="primary">#2196F3</color>
+	<color name="primary_dark">#0D47A1</color>
+	<color name="fb_primary_dark">#0D47A1</color>
+	<color name="fb_primary">#3b5998</color>
 
 </resources>

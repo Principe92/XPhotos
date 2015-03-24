@@ -44,7 +44,7 @@ private void LaunchMain(){
 	
 	switch(mFirstShown){
 		case "facebook":
-			intent = new Intent(this, Activity_Main.class);
+			intent = new Intent(this, FBMainActivity.class);
 			break;
 		case "twitter":
 			intent = new Intent(this, Twitter_Main_Activity.class);
@@ -56,7 +56,7 @@ private void LaunchMain(){
 			intent = new Intent(this, Gallery_Main_Activity.class);
 			break;
 		default:
-			intent = new Intent(this, Activity_Main.class);
+			intent = new Intent(this, FBMainActivity.class);
 			break;
 	}
 	

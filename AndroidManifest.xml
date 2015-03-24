@@ -1,177 +1,172 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="prince.app.sphotos"
-    android:versionCode="2"
-    android:versionName="2.0" >
+	package="prince.app.sphotos"
+	android:versionCode="2"
+	android:versionName="2.0" >
 
-    <uses-sdk
-        android:minSdkVersion="11"
-        android:targetSdkVersion="22" />
-    
-     <uses-feature
-        android:name="android.hardware.camera"
-        android:required="false" />
+	<uses-sdk
+		android:minSdkVersion="11"
+		android:targetSdkVersion="22" />
 
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
-    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
-        <uses-permission android:name="android.permission.READ_SYNC_SETTINGS" />
-    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
-    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name='android.permission.WAKE_LOCK'/>
+	<uses-feature
+		android:name="android.hardware.camera"
+		android:required="false" />
 
-    <application
-        android:name="prince.app.sphotos.tools.Global"
-        android:hardwareAccelerated="true"
-        android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
-        android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
-        <meta-data
-            android:name="com.facebook.sdk.ApplicationId"
-            android:value="@string/app_id" />
-        
-        <receiver android:name='prince.app.sphotos.bgtask.ScheduleTask'/>
-        <receiver android:name='prince.app.sphotos.bgtask.FetchData'/>
-        
-        <service	android:name="prince.app.sphotos.database.AlbumsAccess" 
-            		android:exported="false"/>
-        <service	android:name="prince.app.sphotos.database.ImagesAccess" 
-            		android:exported="false"/>
-        <service	android:name="prince.app.sphotos.bgtask.UpdateService" 
-            		android:exported="false"/>
-        
-        
-        <!-- Launch Activity -->
-        <activity
-            android:name="prince.app.sphotos.Activity_Welcome"
-            android:icon="@drawable/fb_logo"
-            android:label="@string/app_name"
-            android:launchMode="singleInstance"
-            android:noHistory="true"
-            android:theme="@style/Main" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.GET_ACCOUNTS" />
+	<uses-permission android:name="android.permission.USE_CREDENTIALS" />
+	<uses-permission android:name="android.permission.READ_SYNC_SETTINGS" />
+	<uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
+	<uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+	<uses-permission android:name="android.permission.WAKE_LOCK" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        
-        <!-- Facebook Main Activity -->
-        <activity
-            android:name="prince.app.sphotos.Activity_Main"
-            android:icon="@drawable/fb_logo"
-            android:label="@string/facebook"
-            android:launchMode="singleTask"
-            android:theme="@style/FB_theme" />
-        
-        <activity android:name="com.facebook.LoginActivity" />
-         
-         <!-- ALBUM Activity -->
-        <activity
-            android:name="prince.app.sphotos.Activity_Albums"
-            android:icon="@drawable/ic_action_picture"
-            android:label="@string/title_albums"
-            android:theme="@style/FB_theme.albums" >
-            
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="prince.app.sphotos.FB_Main_Activity" />
-        </activity>
-        
-        <!-- FB_Photos_Activity-->
-        <activity
-            android:name="prince.app.sphotos.Activity_Photos"
-            android:icon="@drawable/ic_action_picture"
-            android:label="@string/image"
-            android:theme="@style/FB_theme.photos" />
-        
-         <!--SDCard Photos Main Activity -->
-        <activity
-            android:name="prince.app.sphotos.Gallery_Main_Activity"
-            android:icon="@drawable/ic_launcher_gallery"
-            android:label="@string/title_gallery"
-            android:launchMode="singleTop"
-            android:theme="@style/Local_Theme" >
-        </activity>
-        
-         <!-- SDCard Photos Full Image Main Activity -->
-        <activity
-            android:name="prince.app.sphotos.Gallery_Full_Activity"
-            android:icon="@drawable/ic_launcher_gallery"
-            android:label="@string/title_gallery"
-            android:theme="@style/Full_Image" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="prince.app.sphotos.Gallery_Main_Activity" />
-        </activity>
-        
-        <!-- Twitter Main Activity -->
-        <activity
-            android:name="prince.app.sphotos.Twitter_Main_Activity"
-            android:icon="@drawable/ic_action_twitter_logo_blue"
-            android:label="@string/title_twitter"
-            android:launchMode="singleTop"
-            android:theme="@style/twitter_theme" >
-        </activity>
-        
-        <!-- Google Plus Main Activity -->
-        <activity
-            android:name="prince.app.sphotos.Google_Main_Activity"
-            android:label="@string/title_google"
-            android:launchMode="singleTop"
-            android:logo="@drawable/btn_gp"
-            android:theme="@style/gp_theme" >
-        </activity>
-        
-         <!-- Uploaded/Tagged Activity -->
-        <activity
-            android:name="prince.app.sphotos.Activity_Tag"
-            android:icon="@drawable/fb_logo"
-            android:label="@string/facebook"
-            android:theme="@style/FB_theme">
-            
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="prince.app.sphotos.FB_Main_Activity" />
-		</activity>
-        
-         <!-- Off line Activity -->
-        <activity
-            android:name="prince.app.sphotos.Offline_Image_Activity"
-            android:icon="@drawable/fb_logo"
-            android:label="@string/facebook"
-            android:theme="@style/FB_theme"/>
-        
-        <activity
-            android:name="prince.app.sphotos.Waiting_Activity"
-            android:launchMode="singleInstance"
-            android:theme="@style/Main"
-            android:noHistory="true"
-            android:label="@string/facebook" >
-        </activity>
-        
-        <!-- Facebook FullImage Activity -->
-        <activity
-            android:name="prince.app.sphotos.Activity_FullImage"
-            android:icon="@drawable/fb_logo"
-            android:label="@string/facebook"
+	<application
+		android:name="prince.app.sphotos.tools.Global"
+		android:allowBackup="true"
+		android:hardwareAccelerated="true"
+		android:icon="@drawable/ic_launcher"
+		android:label="@string/app_name"
+		android:theme="@style/AppBaseTheme" >
+		<meta-data
+			android:name="com.facebook.sdk.ApplicationId"
+			android:value="@string/app_id" />
+
+		<receiver android:name="prince.app.sphotos.bgtask.ScheduleTask" />
+		<receiver android:name="prince.app.sphotos.bgtask.FetchData" />
+
+		<service
+			android:name="prince.app.sphotos.database.AlbumsAccess"
+			android:exported="false" />
+		<service
+			android:name="prince.app.sphotos.database.ImagesAccess"
+			android:exported="false" />
+		<service
+			android:name="prince.app.sphotos.bgtask.UpdateService"
+			android:exported="false" />
+
+		<!-- Launch Activity -->
+		<activity
+			android:name="prince.app.sphotos.Activity_Welcome"
+			android:icon="@drawable/fb_logo"
+			android:label="@string/app_name"
 			android:launchMode="singleInstance"
-            android:noHistory="true"
-            android:theme="@style/FB_theme" >
-            
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="prince.app.sphotos.FB_Photos_Activity" />
+			android:noHistory="true"
+			android:theme="@style/Main" >
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
 		</activity>
-        
-        <activity 
-            android:name="prince.app.sphotos.SettingsActivity"
-            android:label="@string/action_settings"/>
-        
-    </application>
+
+		<!-- Facebook Main Activity -->
+		<activity
+			android:name="prince.app.sphotos.FBMainActivity"
+			android:icon="@drawable/fb_logo"
+			android:label="@string/facebook"
+			android:launchMode="singleTask"
+			android:theme="@style/FB_theme" />
+		<activity android:name="com.facebook.LoginActivity" />
+
+		<!-- ALBUM Activity -->
+		<activity
+			android:name="prince.app.sphotos.Activity_Albums"
+			android:icon="@drawable/ic_action_picture"
+			android:label="@string/title_albums"
+			android:theme="@style/FB_theme.albums" >
+			<meta-data
+				android:name="android.support.PARENT_ACTIVITY"
+				android:value="prince.app.sphotos.FB_Main_Activity" />
+		</activity>
+
+		<!-- FB_Photos_Activity -->
+		<activity
+			android:name="prince.app.sphotos.Activity_Photos"
+			android:icon="@drawable/ic_action_picture"
+			android:label="@string/image"
+			android:theme="@style/FB_theme.photos" />
+
+		<!-- SDCard Photos Main Activity -->
+		<activity
+			android:name="prince.app.sphotos.Gallery_Main_Activity"
+			android:icon="@drawable/ic_launcher_gallery"
+			android:label="@string/title_gallery"
+			android:launchMode="singleTop"
+			android:theme="@style/Local_Theme" >
+		</activity>
+
+		<!-- SDCard Photos Full Image Main Activity -->
+		<activity
+			android:name="prince.app.sphotos.Gallery_Full_Activity"
+			android:icon="@drawable/ic_launcher_gallery"
+			android:label="@string/title_gallery"
+			android:theme="@style/Full_Image" >
+			<meta-data
+				android:name="android.support.PARENT_ACTIVITY"
+				android:value="prince.app.sphotos.Gallery_Main_Activity" />
+		</activity>
+
+		<!-- Twitter Main Activity -->
+		<activity
+			android:name="prince.app.sphotos.Twitter_Main_Activity"
+			android:icon="@drawable/ic_action_twitter_logo_blue"
+			android:label="@string/title_twitter"
+			android:launchMode="singleTop"
+			android:theme="@style/twitter_theme" >
+		</activity>
+
+		<!-- Google Plus Main Activity -->
+		<activity
+			android:name="prince.app.sphotos.Google_Main_Activity"
+			android:label="@string/title_google"
+			android:launchMode="singleTop"
+			android:logo="@drawable/btn_gp"
+			android:theme="@style/gp_theme" >
+		</activity>
+
+		<!-- Uploaded/Tagged Activity -->
+		<activity
+			android:name="prince.app.sphotos.Activity_Tag"
+			android:icon="@drawable/fb_logo"
+			android:label="@string/facebook"
+			android:theme="@style/FB_theme" >
+			<meta-data
+				android:name="android.support.PARENT_ACTIVITY"
+				android:value="prince.app.sphotos.FB_Main_Activity" />
+		</activity>
+
+		<!-- Off line Activity -->
+		<activity
+			android:name="prince.app.sphotos.Offline_Image_Activity"
+			android:icon="@drawable/fb_logo"
+			android:label="@string/facebook"
+			android:theme="@style/FB_theme" />
+		<activity
+			android:name="prince.app.sphotos.Waiting_Activity"
+			android:label="@string/facebook"
+			android:launchMode="singleInstance"
+			android:noHistory="true"
+			android:theme="@style/Main" >
+		</activity>
+
+		<!-- Facebook FullImage Activity -->
+		<activity
+			android:name="prince.app.sphotos.Activity_FullImage"
+			android:icon="@drawable/fb_logo"
+			android:label="@string/facebook"
+			android:launchMode="singleInstance"
+			android:noHistory="true"
+			android:theme="@style/FB_theme" >
+			<meta-data
+				android:name="android.support.PARENT_ACTIVITY"
+				android:value="prince.app.sphotos.FB_Photos_Activity" />
+		</activity>
+		<activity
+			android:name="prince.app.sphotos.SettingsActivity"
+			android:label="@string/action_settings" />
+	</application>
 
 </manifest>

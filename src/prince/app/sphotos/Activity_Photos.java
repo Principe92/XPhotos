@@ -35,6 +35,7 @@ import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v4.app.FragmentActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -265,7 +266,7 @@ public class Activity_Photos extends ActivityImages implements Fragment_Favorite
 	}
 	
 	private boolean isTask(String id){
-		return id.equalsIgnoreCase(Activity_Main.TASK_ALBUM);
+		return id.equalsIgnoreCase(FBMainActivity.TASK_ALBUM);
 	}
 	
 	/**
@@ -496,5 +497,11 @@ public class Activity_Photos extends ActivityImages implements Fragment_Favorite
 	@Override
 	protected int getIndex() {
 		return mAlbum;
+	}
+
+	@Override
+	public Toolbar getToolBar() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

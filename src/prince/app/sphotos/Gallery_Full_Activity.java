@@ -196,22 +196,19 @@ OnMenuItemClickListener, android.widget.PopupMenu.OnMenuItemClickListener{
 		} else if (itemId == R.id.action_main_camera) {
 			camera.TakePicture();
 			return true;
-		} else if (itemId == R.id.action_main_options) {
-			openOverflow();
-			return true;
-		}else {
+		} else {
 			return super.onOptionsItemSelected(item);
 		}
 } 
 	
 
 	public void openOverflow(){
-	View view = findViewById(R.id.action_main_options);
+	/*View view = findViewById(R.id.action_main_options);
 	PopupMenu popup = new PopupMenu(this, view);
 	 	popup.setOnMenuItemClickListener(this);
 	    MenuInflater inflater = popup.getMenuInflater();
 	    inflater.inflate(R.menu.full_image, popup.getMenu());
-	    popup.show(); 
+	    popup.show(); */
 }
 
 	@Override

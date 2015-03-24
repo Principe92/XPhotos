@@ -36,7 +36,6 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.util.Log;
 import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
@@ -228,22 +227,19 @@ public abstract class ActivityX extends FragmentActivity implements OnMenuItemCl
 		if (itemId == R.id.action_main_camera) {
 			getCamera().TakePicture();
 			return true;
-		} else if (itemId == R.id.action_main_options) {
-			openSettings(); 
-			return true;
 		} else {
 			return super.onOptionsItemSelected(item);
 		}
 	} 
 
 	public void openSettings(){
-		View view = findViewById(R.id.action_main_options);
+		/*View view = findViewById(R.id.action_main_options);
 		mPopup = new PopupMenu(this, view);
 		mPopup.setOnMenuItemClickListener(this);
 		MenuInflater inflater = mPopup.getMenuInflater();
 		inflater.inflate(R.menu.fb_main_overflow, mPopup.getMenu());
 		hideMenuItems(mPopup.getMenu());
-		mPopup.show();
+		mPopup.show(); */
 	}
 	
 	// Called when an item on the popUp MenuItem is pressed

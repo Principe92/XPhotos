@@ -45,6 +45,11 @@ import android.widget.TextView;
 public class Fragment_Main extends FragmentX{
 	private final static String TAG = Fragment_Main.class.getSimpleName();
 	
+	public static Fragment_Main newInstance(){
+		final Fragment_Main fg = new Fragment_Main();
+		return fg;
+	}
+	
 	// GridView variables
 	private String[] mGridName;
 	
@@ -95,7 +100,7 @@ public class Fragment_Main extends FragmentX{
 	    	
 			@Override
 			public void onGraphFinish(String taskId) {
-	    		if (taskId.equalsIgnoreCase(Activity_Main.TASK_ALBUM)){
+	    		if (taskId.equalsIgnoreCase(FBMainActivity.TASK_ALBUM)){
 	    			
 	    			// Update grid counts
 	    			UpdateFiles.updateCount(getActivity());
@@ -121,7 +126,7 @@ public class Fragment_Main extends FragmentX{
 
 			@Override
 			public void onGraphError(GraphError error, String id) {
-				if (error == GraphError.NO_ALBUM && id.equalsIgnoreCase(Activity_Main.TASK_ALBUM)){
+				if (error == GraphError.NO_ALBUM && id.equalsIgnoreCase(FBMainActivity.TASK_ALBUM)){
 					
 					//TODO: Do something about album Error like trying to fetch again
 					Global.getInstance().showToast("Unable to fetch albums");

@@ -1,7 +1,6 @@
 package prince.app.sphotos.tools;
 
 import java.io.File;
-import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -18,20 +17,20 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
-import android.support.v4.app.ActionBarDrawerToggle;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.PopupMenu.OnMenuItemClickListener;
 import android.widget.Toast;
 
-public abstract class ActivityBase extends FragmentActivity implements OnMenuItemClickListener{
+public abstract class ActivityBase extends ActionBarActivity{
 	
 	protected DrawerLayout mDrawerLayout;
     protected ListView mDrawerList;
@@ -111,38 +110,40 @@ public abstract class ActivityBase extends FragmentActivity implements OnMenuIte
         mDrawerToggle = new ActionBarDrawerToggle(
                 this,                  /* host Activity */
                 mDrawerLayout,         /* DrawerLayout object */
-                R.drawable.ic_drawer,  /* nav drawer image to replace 'Up' caret */
+                getToolBar(),  /* nav drawer image to replace 'Up' caret */
                 R.string.drawer_open,  /* "open drawer" description for accessibility */
                 R.string.drawer_close  /* "close drawer" description for accessibility */
                 ){
         	 public void onDrawerOpened(View view){
-         		getActionBar().setTitle(getOnDrawerOpen());
+         		getSupportActionBar().setTitle(getOnDrawerOpen());
          	}
          	 
          	 public void onDrawerClosed(View view){
-         		 getActionBar().setTitle(getActionBarTitle());
+         		 getSupportActionBar().setTitle(getActionBarTitle());
          	 }
         };
         
         mDrawerLayout.setDrawerListener(mDrawerToggle);
         
-        getActionBar().setDisplayHomeAsUpEnabled(true);
-        getActionBar().setHomeButtonEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeButtonEnabled(true);
 	}
 	
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		
-		if (mDrawerToggle != null && mDrawerToggle.onOptionsItemSelected(item)) return true;
+		if (mDrawerToggle != null && mDrawerToggle.onOptionsItemSelected(item)){
+			return true;
+		}
 		
 		int itemId = item.getItemId();
+		
 		if (itemId == R.id.action_main_camera) {
 			TakePicture();
 			return true;
-		} else if (itemId == R.id.action_main_options) {
-			openSettings(); 
-			return true;
-		} else {
+		}
+		
+		else {
 			return super.onOptionsItemSelected(item);
 		}
 	}
@@ -284,5 +285,11 @@ public abstract class ActivityBase extends FragmentActivity implements OnMenuIte
      * Method to inflate the overflow menu
      */
     protected abstract void openSettings();
+    
+    /**
+	 * Method to fetch the inflated toolbar
+	 * @return - Toolbar object
+	 */
+	public abstract Toolbar getToolBar();
 
 }

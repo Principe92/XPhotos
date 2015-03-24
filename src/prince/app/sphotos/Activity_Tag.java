@@ -10,6 +10,7 @@ import android.graphics.Bitmap;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -204,6 +205,12 @@ public class Activity_Tag extends ActivityImages{
 	@Override
 	protected int getIndex() {
 		return 0;
+	}
+
+	@Override
+	public Toolbar getToolBar() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 		
 		

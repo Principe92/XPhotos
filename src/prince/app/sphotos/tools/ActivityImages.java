@@ -40,7 +40,7 @@ public abstract class ActivityImages extends ActivityBase implements FragmentX.F
 	}
 	
 	@Override
-	public boolean onMenuItemClick(MenuItem item) {
+	public boolean onOptionsItemSelected(MenuItem item) {
 	    int itemId = item.getItemId();
 	    
 		if (itemId == R.id.action_settings) {
@@ -70,7 +70,7 @@ public abstract class ActivityImages extends ActivityBase implements FragmentX.F
 	
 	@Override
 	public void openSettings(){
-			View view = findViewById(R.id.action_main_options);
+		/*	View view = findViewById(R.id.action_main_options);
 			mOverflowMenu = new PopupMenu(this, view);
 			mOverflowMenu.setOnMenuItemClickListener(this);
 			MenuInflater inflater = mOverflowMenu.getMenuInflater();
@@ -83,7 +83,7 @@ public abstract class ActivityImages extends ActivityBase implements FragmentX.F
 			
 			hideShowMenu(mOverflowMenu.getMenu());
 			
-			mOverflowMenu.show();
+			mOverflowMenu.show(); */
 		}
 	
 	@Override

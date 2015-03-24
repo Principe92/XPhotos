@@ -64,7 +64,7 @@ public class SettingsFragment extends PreferenceFragment implements OnSharedPref
 
 			@Override
 			public void onGraphFinish(String taskId) {
-				if (getActivity() != null && taskId.equalsIgnoreCase(Activity_Main.TASK_ALBUM)){
+				if (getActivity() != null && taskId.equalsIgnoreCase(FBMainActivity.TASK_ALBUM)){
 					initEntries(mPrefFav);
 					attachListener(mPrefFav);
 				}
@@ -78,7 +78,7 @@ public class SettingsFragment extends PreferenceFragment implements OnSharedPref
 
 			@Override
 			public void onGraphError(GraphError error, String id) {
-				if (getActivity() != null && id.equalsIgnoreCase(Activity_Main.TASK_ALBUM)){
+				if (getActivity() != null && id.equalsIgnoreCase(FBMainActivity.TASK_ALBUM)){
 					if (error == GraphError.NO_ALBUM){
 						mPrefFav.setSummary("Error loading albums");
 					}

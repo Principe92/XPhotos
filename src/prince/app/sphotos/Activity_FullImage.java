@@ -191,9 +191,6 @@ public class Activity_FullImage extends FragmentActivity implements OnClickListe
 		} else if (itemId == R.id.action_main_camera) {
 			camera.TakePicture();
 			return true;
-		} else if (itemId == R.id.action_main_options) {
-			openSettings();
-			return true;
 		}else {
 			return super.onOptionsItemSelected(item);
 		}
@@ -201,12 +198,12 @@ public class Activity_FullImage extends FragmentActivity implements OnClickListe
 	
 
 	public void openSettings(){
-		View view = findViewById(R.id.action_main_options);
+		/*View view = findViewById(R.id.action_main_options);
 	    PopupMenu popup = new PopupMenu(this, view);
 	    popup.setOnMenuItemClickListener(this);
 	    MenuInflater inflater = popup.getMenuInflater();
 	    inflater.inflate(R.menu.full_image, popup.getMenu());
-	    popup.show(); 
+	    popup.show();  */
 }
 
 	@Override

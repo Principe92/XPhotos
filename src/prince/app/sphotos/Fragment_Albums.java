@@ -128,7 +128,7 @@ public class Fragment_Albums extends FragmentX {
 	    	@Override
 	    	public void onGraphProgress(boolean refresh, String id) {
 	    		
-	    		if (id.equalsIgnoreCase(TAG) || id.equalsIgnoreCase(Activity_Main.TASK_ALBUM)){
+	    		if (id.equalsIgnoreCase(TAG) || id.equalsIgnoreCase(FBMainActivity.TASK_ALBUM)){
 	    			// Start the refreshing indicator
 	    			getmSwipeRefreshLayout().setRefreshing(true);
 	    			
@@ -146,7 +146,7 @@ public class Fragment_Albums extends FragmentX {
 			@Override
 			public void coverReady(String id) {
 			
-				if (id.equalsIgnoreCase(TAG) || id.equalsIgnoreCase(Activity_Main.TASK_ALBUM)){
+				if (id.equalsIgnoreCase(TAG) || id.equalsIgnoreCase(FBMainActivity.TASK_ALBUM)){
 					// Stop the refreshing indicator
 					getmSwipeRefreshLayout().setRefreshing(false);
 						
@@ -159,12 +159,12 @@ public class Fragment_Albums extends FragmentX {
 			@Override
 			public void onGraphError(GraphError error, String id) {
 				
-				if (error == GraphError.NO_COVER && id.equalsIgnoreCase(Activity_Main.TASK_ALBUM)){
+				if (error == GraphError.NO_COVER && id.equalsIgnoreCase(FBMainActivity.TASK_ALBUM)){
 					Global.getInstance().showToast("Unable to load images");
 					if (!Global.getInstance().isConnection()) Global.getInstance().showToast("Check network connection", Toast.LENGTH_LONG);
 				}
 				
-				else if (error == GraphError.NO_ALBUM && id.equalsIgnoreCase(Activity_Main.TASK_ALBUM)){
+				else if (error == GraphError.NO_ALBUM && id.equalsIgnoreCase(FBMainActivity.TASK_ALBUM)){
 					mCallback.onDbError();
 				}
 				
